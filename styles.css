@@ -10,7 +10,9 @@
 }
 
 :root {
+  --main-bg-color: #f8f8f8;
   --btn-color: #596d48;
+  --btn-hover-color: #4d5f3e;
   --input-border: #e5e7eb;
   --input-focus-border: #0005e7;
   --input-invalid-border: #ea2424;
@@ -21,8 +23,15 @@
 
 body {
   width: 100%;
+  /* height: 100vh; */
+}
+
+section {
+  display: flex;
   height: 100vh;
 }
+
+/* * ASIDE STYLING * */
 
 .aside__image {
   width: 37%;
@@ -55,4 +64,123 @@ h1 {
   font-weight: 800;
   font-size: 4rem;
   color: var(--primary-text-color);
+}
+
+/* *MAIN STYLING* */
+
+/* ? General Styling */
+.form__div > h3,
+.label,
+.result,
+.acct_text {
+  font-weight: 500;
+}
+
+.from__button,
+.log_text {
+  font-weight: 600;
+}
+
+main {
+  width: 63%;
+  background-color: var(--main-bg-color);
+  font-family: "Roboto", sans-serif;
+  height: 99vh;
+  overscroll-behavior: smooth scroll;
+  overflow-y: auto;
+}
+
+.main__header {
+  padding: 2em;
+  margin: 2em 0;
+}
+
+.main-h3 {
+  width: 55ch;
+  font-size: 1.2rem;
+  margin: 0 0 1em 0;
+  line-height: 1.2;
+}
+
+.form__div {
+  padding: 1.6em 2em;
+  background-color: var(--primary-text-color);
+  box-shadow: 10px 8px 19px rgba(0, 0, 0, 0.1);
+}
+
+.form__div > h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+.form__input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+}
+
+.label__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.label {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.input {
+  padding: 0.5em;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  outline: none;
+  width: 70%;
+}
+
+.result {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.input:focus {
+  border: 1px solid var(--input-focus-border);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.input:invalid,
+.inputInvalid {
+  border: 1px solid var(--input-invalid-border);
+}
+
+.button__login {
+  margin: 0.7em 0;
+  padding: 1em 2.4em;
+  transition: background-color 0.3s;
+}
+
+.form__button {
+  background-color: var(--btn-color);
+  color: var(--primary-text-color);
+  padding: 0.6em 2.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 3em 2.1em 0em 2.1em;
+  transition: background-color 0.3s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.form__button:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.log_text {
+  color: var(--btn-color);
+}
+
+.log_text:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

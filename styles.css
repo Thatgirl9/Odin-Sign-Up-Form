@@ -9,9 +9,50 @@
   box-sizing: border-box;
 }
 
+:root {
+  --btn-color: #596d48;
+  --input-border: #e5e7eb;
+  --input-focus-border: #0005e7;
+  --input-invalid-border: #ea2424;
+
+  --primary-text-color: #fff;
+  --secondary-text-color: #000;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.aside__image {
+  width: 37%;
+  background-image: url("./asset/halie-west-25xggax4bSA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.odin__logo__text {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 7em;
+  width: 100%;
+  padding: 0.4em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.odin-logo {
+  width: 5em;
+}
+
 h1 {
   font-family: "Norse-Bold";
   font-weight: 800;
   font-size: 4rem;
-  color: #333;
+  color: var(--primary-text-color);
 }
